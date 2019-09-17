@@ -1,9 +1,16 @@
-# add1920-aaron
-trabajos de add
-* ejemplo de trabajo
-* otro ejemplo
-* otro 
+# Documento de ejemplo
+
+Mitología:
+* griega
+* romana
 
 Perséfone está atrapada en el inframundo
 
->Perséfone es diosa de la fertilidad y las estaciones
+>Perséfone es diosa de la fertilidad y las estaciones.
+
+¡Información sobre mitología!
+
+```
+git clone
+```
+![perséfone](img/perse.jpg)
