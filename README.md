@@ -6,4 +6,4 @@ trabajos de add
 
 Perséfone está atrapada en el inframundo
 
->Perséfone es... 
+>Perséfone es diosa de la fertilidad y las estaciones
