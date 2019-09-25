@@ -1,4 +1,4 @@
-# Práctica 2: SSH
+# Actividad 2: SSH
 
 >Antes de comenzar, ponemos los nombres de host e IP's que se nos piden en nuestras máquinas, por ejemplo en GNU/Linux:
 >![hosts,ips](img/1hostnameeip.png)
@@ -49,7 +49,7 @@ Lo hemos arreglado gracias al propio mensaje de advertencia:
 
 ![fix](img/13arr.png)
 ## (5) Autenticación mediante clave pública
-Desde la máquina GNU/Linux cliente, **sin usar root**, creamos un nuevo par de claves para el usuario. 
+Desde la máquina GNU/Linux cliente, **sin usar root**, creamos un nuevo par de claves para el usuario.
 ```
 ssh-keygen -t rsa
 
