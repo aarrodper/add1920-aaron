@@ -10,7 +10,9 @@
 >![comandos1](img/4comandoparte1.png)
 >![comandos2](img/4comandosparte2.png)
 >![comandos3](img/4comandosparte3.png)
+
 >Y para acabar con esta parte, creamos 4 usuarios:
+
 >![apell](img/3usuariosenserver.png)
 
 ## (2.2) Primera conexión SSH GNU/Linux
@@ -47,7 +49,18 @@ Lo hemos arreglado gracias al propio mensaje de advertencia:
 
 ![fix](img/13arr.png)
 ## (5) Autenticación mediante clave pública
+Desde la máquina GNU/Linux cliente, **sin usar root**, creamos un nuevo par de claves para el usuario. 
+```
+ssh-keygen -t rsa
 
+sh-copy-id rodriguez4@ssh-server20g
+```
+
+Comprobamos que, efectivamente, desde el cliente Linux no pide password, pero sí la pide desde Windows.
+
+![noclave](img/14nopideclavedesdelinux.png)
+
+![siclave](img/14sipidewin.png)
 
 ## (6) Uso de SSH como túnel para X
 
