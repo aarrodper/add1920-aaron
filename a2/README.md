@@ -1,24 +1,19 @@
 # Práctica 2: SSH
 
-Antes de comenzar, ponemos los nombres de host e IP's que se nos piden en nuestras máquinas, por ejemplo en GNU/Linux:
+>Antes de comenzar, ponemos los nombres de host e IP's que se nos piden en nuestras máquinas, por ejemplo en GNU/Linux:
+>![hosts,ips](img/1hostnameeip.png)
 
-![hosts,ips](img/1hostnameeip.png)
+>Tampoco podemos olvidarnos de añadir en el servidor ssh a los clientes en el archivo */etc/hosts* .
+>![hosts](img/2clientesanadiralhosts.png)
 
-Tampoco podemos olvidarnos de añadir en el servidor ssh a los clientes en el archivo */etc/hosts* .
+>Realizamos algunas comprobaciones:
+>![comandos1](img/4comandoparte1.png)
+>![comandos2](img/4comandosparte2.png)
+>![comandos3](img/4comandosparte3.png)
+>Y para acabar con esta parte, creamos 4 usuarios:
+>![apell](img/3usuariosenserver.png)
 
-![hosts](img/2clientesanadiralhosts.png)
-
-Realizamos algunas comprobaciones:
-
-![comandos1](img/4comandoparte1.png)
-![comandos2](img/4comandosparte2.png)
-![comandos3](img/4comandosparte3.png)
-
-Y para acabar con esta parte, creamos 4 usuarios:
-
-![apell](img/3usuariosenserver.png)
-
-### (2.2) Primera conexión SSH GNU/Linux
+## (2.2) Primera conexión SSH GNU/Linux
 Cuando hayamos realizado los pasos anteriores, a parte de otros que hemos obviado, realizamos la comprobación.
 
 Vamos al cliente (*ssh-client20g*) y hacemos ping al servidor (*ssh-server20g*).
@@ -38,17 +33,26 @@ Y ahora nos iremos conectando con nuestros usuarios desde el cliente:
 Y seguidamente comprobaremos el fichero ./ssh/known_hosts:
 
 ![knownhosts](img/9hostconocidos.png)
+>### Anexo: Windows
+>También lo probamos en Windows haciendo uso de PuTTY
+> ![windows](img/10putty.png)
+> ![windows2](img/11putyfuncionando.png)
 
-### (3.2) Comprobar cambio de clave del servidor SSH
+## (3.2) Comprobar cambio de clave del servidor SSH
+![nokey](img/12nokey.png)
+
+![nokey](img/12nokey2.png)
+
+Lo hemos arreglado gracias al propio mensaje de advertencia:
+
+![fix](img/13arr.png)
+## (5) Autenticación mediante clave pública
 
 
-### (5) Autenticación mediante clave pública
+## (6) Uso de SSH como túnel para X
 
 
-### (6) Uso de SSH como túnel para X
+## (8.1) Restricción sobre un usuario
 
 
-### (8.1) Restricción sobre un usuario
-
-
-### (9) Servidor SSH en Windows
+## (9) Servidor SSH en Windows
