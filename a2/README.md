@@ -1,7 +1,43 @@
 # Práctica 2: SSH
 
-### (2.2) Primera conexión SSH GNU/Linux
+Antes de comenzar, ponemos los nombres de host e IP's que se nos piden en nuestras máquinas, por ejemplo en GNU/Linux:
 
+![hosts,ips](img/1hostnameeip.png)
+
+Tampoco podemos olvidarnos de añadir en el servidor ssh a los clientes en el archivo */etc/hosts* .
+
+![hosts](img/2clientesanadiralhosts.png)
+
+Realizamos algunas comprobaciones:
+
+![comandos1](img/4comandoparte1.png)
+![comandos2](img/4comandosparte2.png)
+![comandos3](img/4comandosparte3.png)
+
+Y para acabar con esta parte, creamos 4 usuarios:
+
+![apell](img/3usuariosenserver.png)
+
+### (2.2) Primera conexión SSH GNU/Linux
+Cuando hayamos realizado los pasos anteriores, a parte de otros que hemos obviado, realizamos la comprobación.
+
+Vamos al cliente (*ssh-client20g*) y hacemos ping al servidor (*ssh-server20g*).
+
+![pingserver](img/6pingaserver.png)
+
+Comprobamos que el puerto 22 está abierto, para ello hacemos uso del "nmap".
+
+![nmap](img/7comprobacionnmap.png)
+
+Y ahora nos iremos conectando con nuestros usuarios desde el cliente:
+
+![usuarios1](img/8sshrodriguez12.png)
+
+![usuarios2](img/8sshrodriguez34.png)
+
+Y seguidamente comprobaremos el fichero ./ssh/known_hosts:
+
+![knownhosts](img/9hostconocidos.png)
 
 ### (3.2) Comprobar cambio de clave del servidor SSH
 
