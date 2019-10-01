@@ -24,7 +24,7 @@ Vamos al cliente (*ssh-client20g*) y hacemos ping al servidor (*ssh-server20g*).
 
 Comprobamos que el puerto 22 está abierto, para ello hacemos uso del "nmap".
 
-![nmap](img/7comprobacionnmap.png)
+![nmap mod](img/7comprobacionnmap.png)
 
 Y ahora nos iremos conectando con nuestros usuarios desde el cliente:
 
@@ -63,9 +63,52 @@ Comprobamos que, efectivamente, desde el cliente Linux no pide password, pero s�
 ![siclave](img/14sipidewin.png)
 
 ## (6) Uso de SSH como túnel para X
+Lo primero que haremos será entrar a nuestro servidor e instalar allí una aplicación. En mi caso será Geany.
+En "/etc/ssh/sshd_config" debemos asegurarnos que la opción **X11Forwarding** esté en **yes**.
 
+![x11forw](img/15tunel.png)
 
+Ahora, verifiquemos que la aplicación está instalada en el servidor pero no en nuestro cliente:
+
+![No instalado](img/15noinst.png)
+
+![Instalado](img/15inst.png)
+
+Comprobemos el  funcionamiento de nuestra aplicación:
+
+![ssh -X](img/16remota.png)
+
+![funcionando geany](img/16geany.png)
 ## (8.1) Restricción sobre un usuario
+Vamos a modificar SSH para que rodriguez2 tenga permiso denegado desde los clientes.
+
+Modificaremos el fichero "/etc/ssh/sshd_config" de la siguiente manera:
+
+![denyrodriguez2](img/17denyrod2.png)
+
+Ahora reiniciamos el servicio con *sudo systemctl restart sshd*.
+
+Comprobamos que, entrando con "rodriguez2", nuestra contraseña resulta inválida y no podemos entrar. Ni desde Linux ni desde Windows.
+
+![ssh](img/18deny.png)
+
+![contraseña](img/19pass.png)
+
+![denegado](img/19pass1_5.png)
+
+![windows](img/19pass2.png)
 
 
 ## (9) Servidor SSH en Windows
+
+Configuramos el servidor Windows con el nombre "ssh-server20s".
+
+![hostnameserver](img/20hostname.png)
+
+Añadimos el cliente Windows y el cliente Linux en el archivo "hosts" (```C:\Windows\System32\drivers\etc\hosts"```)
+
+![hostss](img/20hosts.png)
+
+Probamos haciendo ping a ambos equipos.
+
+![ping!](img/21ping.png)
