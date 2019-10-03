@@ -97,24 +97,3 @@ Comprobamos que, entrando con "rodriguez2", nuestra contraseña resulta inválid
 ![denegado](img/19pass1_5.png)
 
 ![windows](img/19pass2.png)
-
-
-## (9) Servidor SSH en Windows
-
-Configuramos el servidor Windows con el nombre "ssh-server20s".
-
-![hostnameserver](img/20hostname.png)
-
-Añadimos el cliente Windows y el cliente Linux en el archivo "hosts" (```C:\Windows\System32\drivers\etc\hosts"```)
-
-![hostss](img/20hosts.png)
-
-Probamos haciendo ping a ambos equipos.
-
-![ping!](img/21ping.png)
-
-Para instalar ssh, usaremos el comando provisto por el profesor:
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/teuton-software/teuton/master/bin/windows_s-node_install.ps1'))
-```
-Lo pondremos en la consola como administrador:
