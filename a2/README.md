@@ -112,3 +112,9 @@ Añadimos el cliente Windows y el cliente Linux en el archivo "hosts" (```C:\Win
 Probamos haciendo ping a ambos equipos.
 
 ![ping!](img/21ping.png)
+
+Para instalar ssh, usaremos el comando provisto por el profesor:
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/teuton-software/teuton/master/bin/windows_s-node_install.ps1'))
+```
+Lo pondremos en la consola como administrador:
