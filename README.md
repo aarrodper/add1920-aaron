@@ -10,4 +10,4 @@ Temas:
 ```
 ¡Así ponemos comandos!
 ```
-![linux y windows](img/add.jpg =100x100)
+![linux y windows](img/add.jpg)
