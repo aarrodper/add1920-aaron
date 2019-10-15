@@ -5,7 +5,7 @@ Temas:
 * Tema 2
 * Tema 3
 
->Profesor: dvarrui
+>Profesor: dvarrui :+1:
 
 ```
 ¡Así ponemos comandos!
