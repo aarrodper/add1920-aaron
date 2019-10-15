@@ -1,16 +1,13 @@
-# Documento de ejemplo
+# Administración de Sistemas Operativos (ADD)
 
-Mitología:
-* griega
-* romana
+Temas:
+* Tema 1
+* Tema 2
+* Tema 3
 
-Perséfone está atrapada en el inframundo
-
->Perséfone es diosa de la fertilidad y las estaciones.
-
-¡Información sobre mitología!
+>Profesor: dvarrui
 
 ```
-git clone
+¡Así ponemos comandos!
 ```
-![perséfone](img/perse.jpg)
+![linux y windows](img/add.jpg =100x100)
