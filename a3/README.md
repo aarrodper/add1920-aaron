@@ -1,7 +1,6 @@
 # Servidor de Impresión en Windows
 
-###  *Componentes del grupo: Aarón Rguez. Pérez y Ricardo S. Rodríguez 
-Pinho.*
+###  *Componentes del grupo: Aarón Rguez. Pérez y Ricardo S. Rodríguez Pinho.*
 
 ## (1.3) Comprobar que se imprime de forma local
 
