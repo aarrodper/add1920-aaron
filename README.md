@@ -1,6 +1,6 @@
 # Administración de Sistemas Operativos (ADD)
 
-Actividades:
+## Actividades:
 * #### [A1: VNC](a1/README.md) :eyes:
 
 * #### [A2: SSH](a2/README.md) :computer:
