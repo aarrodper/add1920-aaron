@@ -1,13 +1,10 @@
 # Administración de Sistemas Operativos (ADD)
 
-Temas:
-* Tema 1
-* Tema 2
-* Tema 3
+Actividades:
+* #### [A1: VNC](a1/README.md) :eyes:
 
->Profesor: dvarrui :+1:
+* #### [A2: SSH](a2/README.md) :computer:
 
-```
-¡Así ponemos comandos!
-```
-![linux y windows](img/add.jpg)
+* #### [A3: Servidor de impresión Windows](a3/README.md) :fax:
+
+* #### [A4: SAMBA OpenSUSE](a4/README.md) :satellite:
