@@ -5,6 +5,6 @@
 
 * #### [A2: SSH](a2/README.md) :computer:
 
-* #### [A3: Servidor de impresión Windows](a3/README.md) :fax:
+* #### [A3: Servidor de impresión Windows](a3/README.md)  :card_index:
 
 * #### [A4: SAMBA OpenSUSE](a4/README.md) :satellite:
