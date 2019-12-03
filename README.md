@@ -9,7 +9,7 @@
 
 * #### [A4: SAMBA OpenSUSE](a4/README.md) :satellite:
 
-* #### [A5](a5/README.md) :question:
+* #### [A5: LDAP OpenSUSE](a5/README.md) :globe_with_meridians:
 
 * #### [A6](a6/README.md) :question:
 

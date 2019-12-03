@@ -39,7 +39,38 @@ Nos dará un error con el módulo *selinux*, pero de momento no indagaremos en �
 
 ## [3.2] Agregar usuarios
 
-Para ello usaremos un fihero **ldif** como el siguiente.
+Para ello usaremos un fihero **ldif** como el siguiente. Yo lo llamaré "aaron-add.ldif".
 
+>NO OLVIDAR: Cambiar ldapXX por nuestro número. En mi caso "ldap20"
+
+![ldif](img/12.png)
+
+Y lo añadimos.
+![ldif 2](img/7.png)
 
 ## [3.3] Comprobar nuevo usuario
+![Comp1](img/9.png)
+
+![COMP2](img/8.png)
+## [4.1] Slappasswd
+Mi contraseña aparece encriptada por defecto, así que no *parece* necesario usar esta herramienta. Pero en los archivos de configuración SÍ que el fichero está en texto plano, y es inseguro. Para arreglar esto, usaremos "slappasswd".
+Se usa así:
+```
+$ slappasswd -h {SSHA}
+New password:
+Re-enter new password:
+{SSHA}5uUxSgD1ssGkEUmQTBEtcqm+I1Aqsp37
+```
+![Encriptada](img/11enc.png)
+## [4.2] Agregar más usuarios
+De la misma manera que antes. Creando el ".ldif" y luego ejecutando el comando la igual que aquí
+![redo](img/7.png)
+
+Yo he creado los usuarios
+- Zeus
+- Hera
+- Argus
+
+## [4.3] Comprobar los usuarios creados
+
+![comp](img/13.png)
