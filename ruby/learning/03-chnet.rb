@@ -42,7 +42,7 @@ end
 
 def home_static
   system('sudo cp /home/aaron/net_config/class109_static /etc/sysconfig/network/ifcfg-eth0')
-  reset 
+  reset
 end
 
 menu
