@@ -17,4 +17,4 @@
 
 * #### [A8](a8/README.md) :question:
 
-* #### [RUBY](ruby/README.md) :gem:
+* #### [RUBY](ruby/) :gem:
