@@ -7,7 +7,7 @@ while true
   puts " ( R ) RESET"
   puts " ( 1 ) aula109.static"
   puts " ( 2 ) casa.static"
-  puts " ( E ) EXIT"
+  puts " ( E ) EXIT\n\n"
 case gets.strip
 when "s", "S"
   system('more /etc/sysconfig/network/ifcfg-eth0')
