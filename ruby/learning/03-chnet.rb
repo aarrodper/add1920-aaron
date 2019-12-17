@@ -2,23 +2,26 @@
 
 def menu
 while true
-  puts "Selecciona una acción:"
+  puts "CHOOSE AN OPTION, PLEASE:"
+  puts " ( S ) SHOW CURRENT"
   puts " ( R ) RESET"
   puts " ( 1 ) aula109.static"
   puts " ( 2 ) casa.static"
-  puts " ( E ) SALIR"
+  puts " ( E ) EXIT"
 case gets.strip
+when "s", "S"
+  system('more /etc/sysconfig/network/ifcfg-eth0')
+when "r" , "R"
+  puts "Resetting..."
+  reset
 when "1"
- puts "Ha seleccionado aula109.static"
+ puts "You chose aula109.static"
  class109_static
 when "2"
- puts "Ha seleccionado casa.static"
+ puts "You chose casa.static"
  home_static
-when "r" , "R"
-  puts "Reseteando..."
-  reset
 when "e" , "E"
-  puts "Saliendo..."
+  puts "Exit... Bye!"
   break
 else
   puts "ERROR, opción desconocida."
@@ -31,3 +34,15 @@ def reset
   system('ifdown eth0')
   system('ifup eth0')
 end
+
+def class109_static
+  system('sudo cp /home/aaron/net_config/home_static /etc/sysconfig/network/ifcfg-eth0')
+  reset
+end
+
+def home_static
+  system('sudo cp /home/aaron/net_config/class109_static /etc/sysconfig/network/ifcfg-eth0')
+  reset 
+end
+
+menu
