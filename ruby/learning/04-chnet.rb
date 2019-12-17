@@ -2,7 +2,9 @@
 
 def menu
 while true
-  puts "\nCHOOSE AN OPTION, PLEASE:"
+  puts "\n****************************"
+  puts "  CHOOSE AN OPTION, PLEASE"
+  puts "****************************"
   puts " ( S ) SHOW CURRENT"
   puts " ( R ) RESET"
   puts " ( 1 ) aula109.static"
@@ -10,7 +12,8 @@ while true
   puts " ( E ) EXIT\n\n"
 case gets.strip
 when "s", "S"
-  system('more /etc/sysconfig/network/ifcfg-eth0')
+  system('cd /etc/sysconfig/network/')
+  system("more ifcfg-eth0 | grep 'IPADDR='") 
 when "r" , "R"
   reset
 when "1"
