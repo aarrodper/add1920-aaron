@@ -13,7 +13,7 @@ while true
 case gets.strip
 when "s", "S"
   system('cd /etc/sysconfig/network/')
-  system("more ifcfg-eth0 | grep 'IPADDR='") 
+  system("awk 'FNR>=4 && FNR<=4' ifcfg-eth0") 
 when "r" , "R"
   reset
 when "1"
@@ -52,3 +52,4 @@ def home_static
 end
 
 menu
+
