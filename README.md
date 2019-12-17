@@ -7,7 +7,7 @@
 
 * #### [A3: Servidor de impresión Windows](a3/README.md)  :card_index:
 
-* #### [A4: SAMBA OpenSUSE](a4/README.md) :satellite: (INCOMPLETE)
+* #### [A4: SAMBA OpenSUSE](a4/README.md) :satellite: (INCOMPLETE) :exclamation:
 
 * #### [A5: LDAP OpenSUSE](a5/README.md) :globe_with_meridians:
 
