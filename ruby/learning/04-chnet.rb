@@ -5,15 +5,11 @@ def menu
     puts "\n****************************"
     puts "  CHOOSE AN OPTION, PLEASE"
     puts "****************************"
-    puts " ( S ) SHOW CURRENT"
     puts " ( R ) RESET"
     puts " ( 1 ) aula109.static"
     puts " ( 2 ) casa.static"
     puts " ( E ) EXIT\n\n"
   case gets.strip
-    when "s", "S"
-      system('cd /etc/sysconfig/network/')
-      system("awk 'FNR>=4 && FNR<=4' ifcfg-eth0")
     when "r" , "R"
       reset
     when "1"
