@@ -1,9 +1,6 @@
 #!/usr/bin/env ruby
 
-
-
-
-def help
+def help #Mostrar la ayuda
   print '''Usage:
         systemctml [OPTIONS] [FILENAME]
 Options:
@@ -23,12 +20,12 @@ Description:
   puts ""
 end
 
-def version
+def get_version #Mostrar el nombre y la fecha de creación
   puts "Aarón Rodríguez Pérez"
-  puts "18.12.20"
+  puts "08.01.2020"
 end
 
-def status
+def get_status #Mostrar el estado de los programas (instalados o no)
   filename = ARGV[1]
   file = File.read(filename)
   file_lines = file.split("\n")
@@ -43,14 +40,13 @@ def status
     end
 end
 
-def run
-filename = ARGV[1]
-  file = File.read(filename)
-  file_lines = file.split("\n")
+def run #Ejecutar
+  if Process.uid == 0 #Root
+    filename = ARGV[1]
+    file = File.read(filename)
+    file_lines = file.split("\n")
     file_lines.each do |line|
       split_line = line.split(":")
-    end
-  if Process.uid == 0 #Sí Root
     status = `whereis #{split_line[0]} |grep bin |wc -l`.to_i
     action = "#{split_line[1]}".to_s
       if action == "install"
@@ -68,20 +64,21 @@ filename = ARGV[1]
           puts "#{split_line[1]} uninstalled"
         end
       end
-  else                #No Root 
+      end
+  else #No Root 
 	puts "ERROR : You must be ROOT!"
-	exit 1         
+	exit 1
   end
 end
 
-def menu
+def show_menu #Menú de opciones
   option = ARGV[0] 
   if option == "--help"
     help
   elsif option == "--version"
-    version
+    get_version
   elsif option == "--status"
-    status
+    get_status
   elsif option == "--run"
     run
   else
@@ -89,5 +86,4 @@ def menu
   end
 end
 
-menu
-
+show_menu
