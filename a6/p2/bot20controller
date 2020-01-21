@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+
+status=`systemctl status bot20 | grep Active`.split()
+
+if status[1] != 'active'
+   `systemctl start bot20`
+end

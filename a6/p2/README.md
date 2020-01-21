@@ -1,7 +1,7 @@
 # Bot service (con Telegram)
 
 ## 1.4
-Script del bot (*/usr/local/bin/bot20d*):
+### Script del bot (*/usr/local/bin/bot20d*):
 ```ruby
 #!/usr/bin/env ruby
 
@@ -43,9 +43,13 @@ Telegram::Bot::Client.run(token) do |bot|
 end
 
 ```
-URL del vídeo donde se muestra en funcionamiento:
+### URL del vídeo donde se muestra en funcionamiento:
+
+[]()
+
 ## 2.4
-Fichero de configuración del servicio (*/etc/systemd/system/bot20.service*)
+
+### Fichero de configuración del servicio (*/etc/systemd/system/bot20.service*)
 ```
 [Unit]
 Description=Servicio Bot del alumno20.
@@ -58,7 +62,36 @@ ExecStart=/usr/bin/ruby /usr/local/bin/bot20d
 [Install]
 WantedBy=multi-user.target
 ```
-Capturas:
-[](img/captura2.png)
+### Capturas de inicio y parada del servicio:
+
+![Parada](img/captura2.png)
+
+![Inicio](img/captura3.png)
 
 ## 3.2
+
+### Script del controlador
+```ruby
+#!/usr/bin/env ruby
+
+
+status=`systemctl status bot20 | grep Active`.split()
+
+if status[1] != 'active'
+   `systemctl start bot20`
+end
+
+```
+
+### Tarea programada en crontab
+
+![](img/captura4.png)
+
+### Comprobación de su funcionamiento
+Paramos el servicio...
+
+![](img/captura5.png)
+
+Esperamos 5 minutos y comprobamos el estado del servicio...
+
+![](img/captura6.png)
