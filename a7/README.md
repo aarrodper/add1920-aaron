@@ -47,6 +47,18 @@ Creamos la máquina con `vagrant up` y comprobamos si se ha instalado el geany o
 
 ![](img/proyecto4d.png)
 
-Ha funcionado :+1: 
+Ha funcionado :+1:
 
 ## 7.2. Crear Box Vagrant
+
+![](img/proyecto5redo.png)
+
+![](img/proyecto5redo2.png)
+
+![](img/proyecto5redo3.png)
+
+![](img/proyecto5redo4.png)
+
+Y comprobamos conectándonos por ssh
+
+![](img/proyecto5redo5.png)

@@ -1,0 +1,6 @@
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "aaron20/proyecto5"
+  config.vm.provider "virtualbox"
+
+end
