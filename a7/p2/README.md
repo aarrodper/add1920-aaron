@@ -168,9 +168,12 @@ Por último, comprobamos.
 
 ## 7. Añadir Minion de otro SO (W7)
 >Añadir a /etc/hosts
-![](img/33.png)
-Y en Windows también
-![](img/34.png)
+
+>![](img/33.png)
+
+>Y en Windows también
+
+>![](img/34.png)
 
 Instalamos "salt-minion"
 
@@ -182,4 +185,4 @@ Aceptamos al minion en el máster, como hicimos anteriormente en OpenSUSE.
 
 ![](img/37.png)
 
-¡Y ya estaría! :smile: 
+¡Y ya estaría! :smile:
