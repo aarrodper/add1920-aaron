@@ -1,4 +1,4 @@
-# Salt-stack
+# **U7 - P2: Salt-stack**
 ## 1. Definición
 `Hay varias herramientas conocidas del tipo gestor de infrastructura como Puppet, Chef y Ansible. En esta actividad vamos a practicar Salt-stack con OpenSUSE.`
 
@@ -122,13 +122,64 @@ Comprobamos en el minion si se instaló:
 
 ## 6. Crear más estados
 ### 6.1 Crear estado "users"
+- El **objetivo** es crear dos usuarios y un grupo (al que pertencerán)
 
+>No olvidemos que tenemos que añadir este nuevo estado a "top.sls".
+![](img/28.png)
 
+>Y, antes de aplicar, comprobar con
+```
+    salt '*' state.show_lowstate
+    salt '*' state.show_highstate
+```
 
-![](img/)
+![](img/24-users.png)
 
-![](img/)
+Y aplicarlo.
 
+![](img/25.png)
+
+![](img/26.png)
+
+Comprobamos en el cliente (Minion) si se han creado los usuarios y el grupo.
+
+![](img/27-bien.png)
+
+¡Perfecto! :+1:
 ### 6.2 Crear estado "directories"
 
-## 7. Añadir Minion de otro SO
+- El **objetivo** es crear las carpetas private (700), public (755) y group (750) en el home del usuario koji20.
+
+Lo haremos de esta manera:
+
+![](img/29.png)
+
+Lo añadimos a "top.sls" y aplicamos.
+
+![](img/30.png)
+
+![](img/31.png)
+
+Por último, comprobamos.
+
+![](img/32.png)
+
+¡Bien! :+1:
+
+## 7. Añadir Minion de otro SO (W7)
+>Añadir a /etc/hosts
+![](img/33.png)
+Y en Windows también
+![](img/34.png)
+
+Instalamos "salt-minion"
+
+![](img/35.png)
+
+Aceptamos al minion en el máster, como hicimos anteriormente en OpenSUSE.
+
+![](img/36.png)
+
+![](img/37.png)
+
+¡Y ya estaría! :smile: 
