@@ -12,20 +12,15 @@
 
 >Docker es una tecnología contenedor de aplicaciones construida sobre LXC.
 
-### 1.2. Requisitos
-- OpenSUSE.
-- Kernel 3.10 o superior.
+## 2. Instalación y primeras pruebas
 
-### 1.3. Habilitar el acceso a la red externa a los contenedores
+### 2.1. Habilitar el acceso a la red externa a los contenedores
 - Para que el contenedor tenga acceso a la red exterior, debemos activar la opción `IP_FORWARD` (`net.ipv4.ip_forward`)
 
 ![](img/1-ipforward.png)
 - Reiniciar para que se apliquen los cambios.
 
-
-## 2. Instalación y primeras pruebas
-
-### 2.1. Instalación
+### 2.2. Instalación
 - Ejecutar los siguientes comandos como superusuario:
 
 ```
@@ -43,7 +38,7 @@ docker version          # Información de las versiones cliente y servidor
 
 
 
-### 2.2. Primera prueba
+### 2.3. Primera prueba
 - Ejecutar con nuestro usuario para comprobar que funciona:
 
 ```
@@ -69,11 +64,13 @@ docker run hello-world  # Descarga y ejecuta un contenedor
 docker images           # Vemos la nueva imagen
 docker ps -a            # El contenedor está estado 'Exited'
 ```
+
+
 ![](img/4.png)
 
 ![](img/5.png)
 
-### 2.3. Teoría
+### 2.4. Teoría
 Tabla de referencia para no perderse:
 
 | Software   | Base   | Sirve para crear   | Aplicaciones |
@@ -145,50 +142,110 @@ root@IDContenedor:/# ps -ef
 
 ![](img/15.png)
 
+- Creamos un script con el contenido siguiente:
+
+![](img/back1.png)
+
+- No olvidar darle permisos:
+
+![](img/back2.png)
+
 ### 3.3. Crear una imagen a partir del contenedor
-- Primero debemos averiguar el ID de nuestro contenedor. Para ello, abrimos otro terminal y ejecutamos `docker ps`
 
-![](img/16.png)
+- Abrimos otra ventana del terminal
 
-- Con esto, podemos crear la nueva imagen a partir de los cambios que realizamos sobre la imagen base.
+- ![](img/21.png)
 
-![](img/17.png)
-
-```
-docker ps
-docker stop con_debian  # Paramos el contenedor
-docker ps
-docker ps -a           # Vemos el contenedor parado
-docker rm IDcontenedor # Eliminamos el contenedor
-docker ps -a
-```
-
-![](img/18.png)
-
-![](img/19.png)
-
+- Comprobamos ![](img/22.png)
 
 ## 4. Crear contenedor a partir de nuestra imagen
 
 ### 4.1. Crear contenedor con Nginx
 
+Iniciamos el contenedor a partir de la imagen anterior, indicando su puerto y que ejecute el script.
+
+![](img/24.png)
+
 ### 4.2. Buscar los puertos de salida
 
-## 5. Crear un contenedor a partir de un Dockerfile
+Vemos a qué puerto está redireccionado el puerto 80 del contenedor. Vemos que es el primero.
 
-### 5.1. Comprobaciones iniciales
+![](img/38.png)
 
-### 5.2. Preparar ficheros
+Abrimos un navegador y ponemos "0.0.0.0:PUERTO", en mi caso:
 
-### 5.3. Crear imagen a partir del Dockerfile
+![](img/39-2.png)
 
-### 5.4. Crear contenedor y comprobar
+Y comprobamos el acceso a "holamundo.html"
 
-## 6. Migrar las imágenes de docker a otro servidor
+![](img/39.png)
+
+Parar el contenedor `con_nginx1` y lo borramos
+
+![](img/40.png)
+
+### 4.3. Migrar la imagen a otra máquina
+
+Exportamos la imagen docker a un fichero tar
+
+![](img/41.png)
+
+Intercambiamos nuestra imagen con la de un compañero.
+
+![](img/42.png)
+
+Importamos la imagen Docker del compañero.
+
+![](img/43.png)
+
+## 5. Dockerfile
+
+### 5.1. Preparar ficheros
+
+- Crear  directorio /home/aaron/docker20a, entrar y meter ahí "holamundo.html" y "server.sh".
+
+- ![](img/44.png)
 
 
-### 6.1. Exportar
+- Además, crearemos "Dockerfile" con el contenido de la captura siguiente.
 
-### 6.2. Importar
+- ![](img/46.png)
 
-## 7. Limpiar
+- ![](img/47.png)
+
+
+### 5.2. Crear imagen a partir del Dockerfile
+En el directorio "docker20a" construimos una nueva imagen a partir del Dockerfile
+
+![](img/48.png)
+
+Aquí nos aparece :+1:
+
+![](img/49.png)
+### 5.3. Crear contenedor y comprobar
+
+Creamos el contenedor a partir de la imagen...
+
+![](img/50.png)
+
+Comprobamos desde otra terminal qué puerto escucha...
+
+![](img/51.png)
+
+Y vía navegador web, comprobamos
+
+![](img/52.png)
+
+![](img/53.png)
+
+### 5.4. Usar imágenes ya creadas
+
+Crear el directorio "docker20b" y entrar en él.
+
+![](img/55.png)
+
+Ahora, crear el siguiente Dockerfile...
+
+![](img/56.png)
+
+## 6. Limpiar contenedores e imágenes
