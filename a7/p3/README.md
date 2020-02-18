@@ -248,4 +248,26 @@ Ahora, crear el siguiente Dockerfile...
 
 ![](img/56.png)
 
+Y ejecutar los comandos siguientes para crear la imagen y el contendor.
+
+![](img/58.png)
+
 ## 6. Limpiar contenedores e imágenes
+
+Para ello, haremos uso de los comandos:
+
+```
+    docker ps -a
+    docker stop ...
+    docker rm ...
+    docker images
+    docker rmi ...
+```
+
+![](img/59.png)
+
+![](img/60.png)
+
+![](img/61.png)
+
+![](img/62.png)
